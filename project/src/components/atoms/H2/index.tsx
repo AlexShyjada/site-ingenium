@@ -9,7 +9,7 @@ interface iStyledH2Props {
   color?: string;
 }
 
-const StyledH2 = styled.h1<iStyledH2Props>`
+const StyledH2 = styled.h2<iStyledH2Props>`
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;

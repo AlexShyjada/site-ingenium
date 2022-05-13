@@ -14,7 +14,7 @@ const StyledH1 = styled.h1<iStyledH1Props>`
   font-size: 60px;
   line-height: 68px;
   text-align: center;
-  color: ${(props) => props.color ? props.color : "#455CC7"};
+  color: ${(props) => props.color};
 `;
 
 export function H1(props: iH1Props) {

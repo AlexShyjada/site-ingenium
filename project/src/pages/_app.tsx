@@ -60,6 +60,7 @@ html {
 }
 body{
   font-size: 1.6rem;
+  background: #F4F4F4;
 }
 a {
   color: inherit;

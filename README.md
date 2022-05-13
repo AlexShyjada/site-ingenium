@@ -9,6 +9,9 @@ Esse projeto possui objetivo de ser o Site a [Ingenium Systems](https://ingenium
 <p align="center"><img src="./project/public/preview.png" alt="preview"></p>
 ---
 
+## Design
+Você pode ter acesso ao design pelo [link](https://www.figma.com/file/EgSsHtRn77uPKR0EhZKJUn/Site-Ingenium?node-id=133%3A715)
+
 ## Tecnologias
 
 - [Atomic Design](https://bradfrost.com/)
