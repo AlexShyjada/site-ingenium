@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 interface iH2Props {
   text: string;
-  color: string;
+  color?: string;
 }
 
 interface iStyledH2Props {
-  color: string;
+  color?: string;
 }
 
 const StyledH2 = styled.h1<iStyledH2Props>`
