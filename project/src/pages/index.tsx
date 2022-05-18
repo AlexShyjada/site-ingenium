@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
-import { NossosResultados } from '../components'
+import { ConhecaNossasSolucoes, NossosResultados } from '../components'
 
 const Home: NextPage = () => {
   return (
-    <NossosResultados/>
+    <>
+      <NossosResultados/>
+      <ConhecaNossasSolucoes/>
+    </>
   )
 }
 

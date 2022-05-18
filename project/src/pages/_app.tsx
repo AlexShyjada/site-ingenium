@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,10 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
         {/* Meta tags Facebook */}
         <meta name="og:type" content="website" />
-        <meta
-          name="og:url"
-          content="Alexandre Shyjada: Designer UI/UX, Desenvolvedor Web"
-        />
+        <meta name="og:url" content="" />
         <meta name="og:title" content="" />
         <meta name="og:description" content="" />
         <meta name="og:image" content="/social.png" />

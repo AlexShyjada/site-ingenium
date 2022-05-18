@@ -10,10 +10,11 @@ interface iStyledParagrathProps {
 }
 
 const StyledParagrath = styled.p<iStyledParagrathProps>`
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 68px;
-  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
   color: ${(props) => props.color ? props.color : "#131313"};
 `;
 
