@@ -16,3 +16,5 @@ export * from "./molecules/Solution";
 export * from "./organisms/NossosResultados";
 export * from "./organisms/ConhecaNossasSolucoes";
 export * from "./organisms/Depoimentos";
+export * from "./organisms/AgendeUmaDemonstracao";
+export * from "./organisms/Footer";

@@ -3,6 +3,8 @@ import {
   ConhecaNossasSolucoes,
   NossosResultados,
   Depoimentos,
+  AgendeUmaDemonstracao,
+  Footer,
 } from "../components";
 
 const Home: NextPage = () => {
@@ -11,6 +13,8 @@ const Home: NextPage = () => {
       <NossosResultados />
       <ConhecaNossasSolucoes />
       <Depoimentos />
+      <AgendeUmaDemonstracao />
+      <Footer/>
     </>
   );
 };
