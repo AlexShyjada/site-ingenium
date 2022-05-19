@@ -1,13 +1,18 @@
-import type { NextPage } from 'next'
-import { ConhecaNossasSolucoes, NossosResultados } from '../components'
+import type { NextPage } from "next";
+import {
+  ConhecaNossasSolucoes,
+  NossosResultados,
+  Depoimentos,
+} from "../components";
 
 const Home: NextPage = () => {
   return (
     <>
-      <NossosResultados/>
-      <ConhecaNossasSolucoes/>
+      <NossosResultados />
+      <ConhecaNossasSolucoes />
+      <Depoimentos />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
