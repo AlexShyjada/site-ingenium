@@ -4,6 +4,19 @@ import { Paragrath } from "../..";
 import { H3 } from "../../atoms/H3";
 import { Tag } from "../../atoms/Tag";
 
+interface iSolutionProps {
+  title: string;
+  tags: {
+    id: number;
+    name: string;
+  }[];
+  paragraths: {
+    id: number;
+    text: string;
+  }[];
+  link: string;
+}
+
 const StyledSolution = styled.div`
   display: flex;
   width: 100%;
@@ -24,30 +37,38 @@ const StyledSolution = styled.div`
       padding: 0px;
       gap: 24px;
       max-width: 588px;
+      .titleContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .tagContainer{
+          display: flex;
+          gap: 1rem;
+        }
+      }
     }
   }
 `;
 
-export function Solution() {
+export function Solution(props: iSolutionProps) {
+  const { title, tags, paragraths } = props;
+
   return (
     <StyledSolution>
       <div className="container">
         <div className="textcontainer">
           <div className="titleContainer">
-            <H3 text="ingDesk" />
-            <Tag text="CRM" />
+            <H3 text={title} />
+            <div className="tagContainer">
+              {tags.map((tag) => (
+                <Tag key={tag.id} text={tag.name} />
+              ))}
+            </div>
           </div>
 
-          <Paragrath
-            text="Crie conexões significativas e personalizadas com seus clientes e,
-            ao mesmo tempo, forneça resultados reais para seus negócios."
-          />
-
-          <Paragrath
-            text="Aqui você terá acesso de forma unificada a clientes que estão no
-            Whatsapp, Instagram, Google Business Mensages, Telegram, LinkedIn,
-            Twitter, e-mail e chatbot."
-          />
+          {paragraths.map((paragrath) => (
+            <Paragrath key={paragrath.id} text={paragrath.text} />
+          ))}
         </div>
 
         <Image
