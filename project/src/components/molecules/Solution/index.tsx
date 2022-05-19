@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { Paragrath } from "../..";
+import { Button, Paragrath } from "../..";
 import { H3 } from "../../atoms/H3";
 import { Tag } from "../../atoms/Tag";
 
 interface iSolutionProps {
+  id: number;
   title: string;
   tags: {
     id: number;
@@ -17,7 +18,11 @@ interface iSolutionProps {
   link: string;
 }
 
-const StyledSolution = styled.div`
+interface iStyledSolutionProps {
+  isFlexReverse: number;
+}
+
+const StyledSolution = styled.div<iStyledSolutionProps>`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -25,9 +30,10 @@ const StyledSolution = styled.div`
   align-items: center;
   padding: 40px 0px;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.6);
+  background: ${(props) => props.isFlexReverse % 2 == 0? "#455CC7" : "#FFFFFF"};
   .container {
     align-items: center;
+    flex-direction: ${(props) => props.isFlexReverse % 2 == 0? "row-reverse" : "row"};
     padding: 0px;
     gap: 48px;
     .textcontainer {
@@ -37,11 +43,11 @@ const StyledSolution = styled.div`
       padding: 0px;
       gap: 24px;
       max-width: 588px;
-      .titleContainer{
+      .titleContainer {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        .tagContainer{
+        .tagContainer {
           display: flex;
           gap: 1rem;
         }
@@ -51,10 +57,10 @@ const StyledSolution = styled.div`
 `;
 
 export function Solution(props: iSolutionProps) {
-  const { title, tags, paragraths } = props;
+  const { title, tags, paragraths, link, id } = props;
 
   return (
-    <StyledSolution>
+    <StyledSolution isFlexReverse={id}>
       <div className="container">
         <div className="textcontainer">
           <div className="titleContainer">
@@ -69,6 +75,12 @@ export function Solution(props: iSolutionProps) {
           {paragraths.map((paragrath) => (
             <Paragrath key={paragrath.id} text={paragrath.text} />
           ))}
+          <Button
+            text="Saiba mais"
+            link={link}
+            background={id % 2 == 0 ? "#FFFFFF" : "#455CC7"}
+            color={id % 2 == 0 ? "#455CC7" : "#FFFFFF"}
+          />
         </div>
 
         <Image

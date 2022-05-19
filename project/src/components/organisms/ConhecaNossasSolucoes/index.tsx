@@ -7,6 +7,11 @@ const StyledConhecaNossasSolucoes = styled.section`
   align-items: center;
   padding: 40px 0px 0px;
   gap: 60px;
+  .solutionContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export function ConhecaNossasSolucoes() {
@@ -58,7 +63,7 @@ export function ConhecaNossasSolucoes() {
       link: "#",
     },
     {
-      id: 2,
+      id: 3,
       title: "IngCorp",
       tags: [
         {
@@ -83,15 +88,18 @@ export function ConhecaNossasSolucoes() {
   return (
     <StyledConhecaNossasSolucoes>
       <H2 text="Conheça nossas soluções" />
-      {solution.map((solution) => (
-        <Solution
-          key={solution.id}
-          title={solution.title}
-          tags={solution.tags}
-          paragraths={solution.paragraths}
-          link={solution.link}
-        />
-      ))}
+      <div className="solutionContainer">
+        {solution.map((solution) => (
+          <Solution
+            key={solution.id}
+            id={solution.id}
+            title={solution.title}
+            tags={solution.tags}
+            paragraths={solution.paragraths}
+            link={solution.link}
+          />
+        ))}
+      </div>
     </StyledConhecaNossasSolucoes>
   );
 }

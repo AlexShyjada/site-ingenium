@@ -6,6 +6,7 @@ export * from './atoms/H3'
 export * from './atoms/Paragrath'
 export * from './atoms/Paragrath2'
 export * from './atoms/Tag'
+export * from './atoms/Button'
 
 //Organisms
 export * from './molecules/Solution'
