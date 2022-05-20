@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { Solution, H2 } from "../..";
 
 const StyledConhecaNossasSolucoes = styled.section`
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0px 0px;
+  padding: 80px 0px 0px;
   gap: 60px;
   .solutionContainer{
     width: 100%;

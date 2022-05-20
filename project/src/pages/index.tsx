@@ -5,11 +5,15 @@ import {
   Depoimentos,
   AgendeUmaDemonstracao,
   Footer,
+  Hero,
+  Header,
 } from "../components";
 
 const Home: NextPage = () => {
   return (
     <>
+      <Header />
+      <Hero />
       <NossosResultados />
       <ConhecaNossasSolucoes />
       <Depoimentos />

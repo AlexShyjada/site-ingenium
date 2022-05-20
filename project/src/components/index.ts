@@ -13,6 +13,8 @@ export * from "./atoms/Button";
 export * from "./molecules/Solution";
 
 //Organisms
+export * from "./organisms/Header";
+export * from "./organisms/Hero";
 export * from "./organisms/NossosResultados";
 export * from "./organisms/ConhecaNossasSolucoes";
 export * from "./organisms/Depoimentos";

@@ -9,7 +9,7 @@ const StyledNossosResultados = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 0px;
+  padding: 80px 0px;
   .container{
     display: flex;
     flex-direction: column;
